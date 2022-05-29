@@ -6,6 +6,7 @@ fetch('http://localhost:3000/api/products')
     }
 })
 
+//Fonction "product" permet de récupérer tous les produits 
 .then(function(products){
     console.log (products);
     const sectionElt = document.getElementById("items");

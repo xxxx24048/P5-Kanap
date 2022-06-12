@@ -6,10 +6,6 @@ let url = new URL(location.href);
 let productId = url.searchParams.get('productId');
 console.log('productId', productId);
 
-
-//3. affichage d'une page avec vue d'un produit
-
-// function res = vérifie la bonne récupération des données
 fetch('http://localhost:3000/api/products/' + productId)
     .then(function (res) {
         if (res.ok) {
@@ -78,7 +74,7 @@ fetch('http://localhost:3000/api/products/' + productId)
                 }
 
                 if (kanap.color == 0) {
-                    alert('Merci de sélectionner une teinte.')
+                    alert('Merci de sélectionner une couleur.')
                 } else if (kanap.quantity >= 100 ||
                     //kanap.quantity == "" ||
                     kanap.quantity == 0)

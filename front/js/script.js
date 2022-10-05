@@ -9,16 +9,20 @@ let mainFunction =(products) => {
         sectionElt.appendChild(linkElt); 
         let articleElt = document.createElement('article'); 
         linkElt.appendChild(articleElt);
+
         let imageElt = document.createElement('img');
-        imageElt.src = product.imageUrl;
-        imageElt.alt = product.altText;
+        imageElt.setAttribute ("src", product.imageUrl);
+        imageElt.setAttribute ("alt", product.altTxt);
         articleElt.appendChild(imageElt); 
+
+   
         let h3Elt = document.createElement('h3'); 
         h3Elt.innerHTML = product.name;
         articleElt.appendChild(h3Elt); 
         let pElt = document.createElement('p');
         pElt.innerHTML = product.description;
         articleElt.appendChild(pElt); 
+        
     };
 };
 
